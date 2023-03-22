@@ -7,16 +7,53 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Connectez-vous dans la Incorporation de Claire et deverser vos oeuvres d'art partout sur la toile.">
-        <link href="/assets/CSS/connexion.css">
+        <link href="/assets/CSS/connexion.css" rel="stylesheet">
         <title>Claire.inc | Connexion</title>
     </head>
     <body>
         <header>
+            <nav>
+                <div id="menuBurger">
+                    <a href="#">X</a>
+                    <ul>
+                        <li>
+                            <h2>Pas de compte ?</h2>
+                        </li>
+                        <li>
+                            <h2><a href="/inscription.html">Inscrivez-vous ici</a></h2>
+                        </li>
+                    </ul>
+                </div>
 
+                <a href="#" id="openBtn">
+                    <span class="burger-icon">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                </a>
+
+                <img src="/assets/IMG/logo_claire_inc.svg" alt="logo_claire.inc"/>
+            </nav>
+
+            <h1>Connexion</h1>
+            
         </header>
 
         <main>
+            <form method="post" action="/views/profil.html">
+                <div>
+                    <label for="username">Nom d'utilisateur <em>/ Username</em></label>
+                    <input type="text" name="username" placeholder="utilisatrice8" autofocus/>
+                </div>
+                <div>
+                    <label for="password">Mot de passe <em>/ Password</em></label>
+                    <input type="password" name="password" placeholder="***********"/>
+                </div>
+            </form>
 
+            <button>Annuler</button>
+            <button>Valider</button>
         </main>
 
         <footer>
