@@ -24,9 +24,10 @@
 
             <form method="post" action="/views/profil.html">
                 <div class="yourAvatar">
-                    <label for="avatar">
-                        <input class="avatar" type="file" accept="image/*, .jpg, .jpeg, .png" name="avatar"/>
-                        <img class="avatar" src="/assets/IMG/logo_claire_inc.svg" alt="avatar / logo_claire.inc"/>
+                    <label>
+                        <input type="file" accept="image/*, .jpg, .jpeg, .png" name="avatar"/>
+                        <!--<img class="avatar" src="/assets/IMG/logo_claire_inc.svg" alt="avatar / logo_claire.inc"/>-->
+                        <div id="avatar"></div>
                     </label>
                     <section>
                         <label>Photo de profil <em>Profil picture</em></label>
@@ -48,7 +49,7 @@
                 </div>
                 <div>
                     <label for="description">Votre description <em>/ Your descritpion</em></label>
-                    <input class="description"type="text" name="description" placeholder="quoi de beau sur vous ?"/>
+                    <input class="description"type="text" name="description" placeholder="Quoi de beau sur vous ?"/>
                 </div>
             </form>
 
