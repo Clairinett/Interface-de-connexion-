@@ -13,10 +13,47 @@
     <body>
         <header>
 
+
+            <img src="/assets/IMG/logo_claire_inc.svg" alt="logo_claire.inc"/>
+
         </header>
 
         <main>
 
+            <h1>Votre profil</h1>
+
+            <form method="post" action="/views/profil.html">
+                <div class="yourAvatar">
+                    <label for="avatar">
+                        <input class="avatar" type="file" accept="image/*, .jpg, .jpeg, .png" name="avatar"/>
+                        <img class="avatar" src="/assets/IMG/logo_claire_inc.svg" alt="avatar / logo_claire.inc"/>
+                    </label>
+                    <section>
+                        <label>Photo de profil <em>Profil picture</em></label>
+                        <p>512px /512px max</p>
+                        <button id="uploadAvatar">Changer votre photo ici</button>
+                    </section>
+                </div>
+                <div>
+                    <label for="username">Nom d'utilisateur <em>/ Username</em></label>
+                    <input type="text" name="username" placeholder="utilisatrice8" autofocus/>
+                </div>
+                <div>
+                    <label for="e-mail">Mail <em>/ E-mail</em></label>
+                    <input type="email" name="e-mail" placeholder="exemple@mail.com"/>
+                </div>
+                <div>
+                    <label for="password">Mot de passe <em>/ Password</em></label>
+                    <input type="password" name="password" placeholder="***********"/>
+                </div>
+                <div>
+                    <label for="description">Votre description <em>/ Your descritpion</em></label>
+                    <input class="description"type="text" name="description" placeholder="quoi de beau sur vous ?"/>
+                </div>
+            </form>
+
+            <button>Annuler</button>
+            <button>Valider</button>
         </main>
 
         <footer>

@@ -15,35 +15,37 @@
     </head>
     <body>
         <header>
+            <label for="checkbox">
+                <input type="checkbox" id="open"/>
+            </label>
+            
+            <a href="#" class="openBtn"> 
+                <span class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            
             <nav>
-                <div id="menuBurger">
-                    <a href="#">X</a>
-                    <ul>
-                        <li>
-                            <h2>Déjà un compte ?</h2>
-                        </li>
-                        <li>
-                            <h2><a href="views/connexion.html">Connectez-vous ici</a></h2>
-                        </li>
-                    </ul>
-                </div>
-
-                <a href="#" id="openBtn">
-                    <span class="burger-icon">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                </a>
-
-                <img src="/assets/IMG/logo_claire_inc.svg" alt="logo_claire.inc"/>
+                <ul id="menuBurger" class="burger">
+                    <li>
+                        <h2>Déjà un compte ?</h2>
+                    </li>
+                    <li>
+                        <h2><a href="views/connexion.html">Connectez-vous ici</a></h2>
+                    </li>
+                </ul>
             </nav>
 
-            <h1>Inscription</h1>
+            <img src="/assets/IMG/logo_claire_inc.svg" alt="logo_claire.inc"/>
             
         </header>
 
         <main>
+
+            <h1>Inscription</h1>
+
             <form method="post" action="/views/profil.html">
                 <div>
                     <label for="username">Nom d'utilisateur <em>/ Username</em></label>
@@ -51,7 +53,7 @@
                 </div>
                 <div>
                     <label for="e-mail">Mail <em>/ E-mail</em></label>
-                    <input type="text" name="e-mail" placeholder="exemple@mail.com"/>
+                    <input type="email" name="e-mail" placeholder="exemple@mail.com"/>
                 </div>
                 <div>
                     <label for="password">Mot de passe <em>/ Password</em></label>
