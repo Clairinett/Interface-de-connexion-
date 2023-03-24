@@ -18,6 +18,5 @@ inputFile.addEventListener("change", event => {
 });
 
 
-
 // https://brains.hashnode.dev/upload-user-avatar-with-a-custom-upload-button
 // a revoir 

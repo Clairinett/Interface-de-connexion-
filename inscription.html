@@ -8,14 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Inscrivez-vous dans la Incorporation de Claire et deverser vos oeuvres d'art partout sur la toile.">
         <link href="assets/CSS/inscription.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">   
         <title>Claire.inc | Inscription</title>
     </head>
     <body>
         <header>
-            <input type="checkbox" id="open"/>
+            <input type="checkbox" id="open">
             <label for="checkbox" class="burger-icon">
                 <span></span>
                 <span></span>
@@ -23,7 +20,7 @@
             </label>
             
             <nav class="menuBurger">
-                <ul  class="burger">
+                <ul>
                     <li>
                         <h2>Déjà un compte ?</h2>
                     </li>
@@ -38,26 +35,26 @@
         </header>
 
         <main>
-
             <h1>Inscription</h1>
 
             <form method="post" action="/views/profil.html">
-                <div>
-                    <label for="username">Nom d'utilisateur <em>/ Username</em></label>
+                
+                <label for="username">Nom d'utilisateur <em>/ Username</em>
                     <input type="text" name="username" placeholder="utilisatrice8" autofocus/>
-                </div>
-                <div>
-                    <label for="e-mail">Mail <em>/ E-mail</em></label>
+                </label>
+                
+                <label for="e-mail">Mail<em>/ E-mail</em>
                     <input type="email" name="e-mail" placeholder="exemple@mail.com"/>
-                </div>
-                <div>
-                    <label for="password">Mot de passe <em>/ Password</em></label>
+                </label>
+            
+                <label for="password">Mot de passe <em>/ Password</em>
                     <input type="password" name="password" placeholder="***********"/>
-                </div>
-                <div>
-                    <label for="confirm-password">Confirmer mot de passe <em>/ Confirm password</em></label>
+                </label>
+                
+                <label for="confirm-password">Confirmer mot de passe <em>/ Confirm password</em>
                     <input type="password" name="confirm-password" placeholder="***********"/>
-                </div>
+                </label>
+                    
             </form>
 
             <button>Annuler</button>
@@ -65,8 +62,9 @@
         </main>
 
         <footer>
+            <h3>Mentions légales</h3>
 
-
+            <a href="#">Haut de page</a>
         </footer>
 
         <script src="assets/JS/inscription.js"></script>

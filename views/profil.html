@@ -12,10 +12,26 @@
     </head>
     <body>
         <header>
-
+            <input type="checkbox" id="open">
+            <label for="checkbox" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="menuBurger">
+                <ul>
+                    <li>
+                        <h2>Où allez-vous ?</h2>
+                    </li>
+                    <li>
+                        <h2><a href="#">Votre gallerie</a></h2>
+                    </li>
+                </ul>
+            </nav>
 
             <img src="/assets/IMG/logo_claire_inc.svg" alt="logo_claire.inc"/>
-
+            
         </header>
 
         <main>
@@ -26,31 +42,31 @@
                 <div class="yourAvatar">
                     <label>
                         <input type="file" accept="image/*, .jpg, .jpeg, .png" name="avatar"/>
-                        <!--<img class="avatar" src="/assets/IMG/logo_claire_inc.svg" alt="avatar / logo_claire.inc"/>-->
                         <div id="avatar"></div>
                     </label>
                     <section>
-                        <label>Photo de profil <em>Profil picture</em></label>
+                        <label>Photo de profil <em>/ Profil picture</em></label>
                         <p>512px /512px max</p>
                         <button id="uploadAvatar">Changer votre photo ici</button>
                     </section>
                 </div>
-                <div>
-                    <label for="username">Nom d'utilisateur <em>/ Username</em></label>
+                
+                <label for="username">Nom d'utilisateur <em>/ Username</em>
                     <input type="text" name="username" placeholder="utilisatrice8" autofocus/>
-                </div>
-                <div>
-                    <label for="e-mail">Mail <em>/ E-mail</em></label>
+                </label>
+                
+                <label for="e-mail">Mail <em>/ E-mail</em>
                     <input type="email" name="e-mail" placeholder="exemple@mail.com"/>
-                </div>
-                <div>
-                    <label for="password">Mot de passe <em>/ Password</em></label>
+                </label>
+            
+                <label for="password">Mot de passe <em>/ Password</em>
                     <input type="password" name="password" placeholder="***********"/>
-                </div>
-                <div>
-                    <label for="description">Votre description <em>/ Your descritpion</em></label>
+                </label>
+                
+                <label for="description">Votre description <em>/ Your descritpion</em>
                     <input class="description"type="text" name="description" placeholder="Quoi de beau sur vous ?"/>
-                </div>
+                </label>
+                    
             </form>
 
             <button>Annuler</button>
@@ -58,7 +74,9 @@
         </main>
 
         <footer>
+            <h3>Mentions légales</h3>
 
+            <a href="#">Haut de page</a>
         </footer>
 
         <script src="/assets/JS/profil.js"></script>

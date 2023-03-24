@@ -12,44 +12,41 @@
     </head>
     <body>
         <header>
-            <nav>
-                <div id="menuBurger">
-                    <a href="#">X</a>
-                    <ul>
-                        <li>
-                            <h2>Pas de compte ?</h2>
-                        </li>
-                        <li>
-                            <h2><a href="/inscription.html">Inscrivez-vous ici</a></h2>
-                        </li>
-                    </ul>
-                </div>
+            <input type="checkbox" id="open">
+            <label for="checkbox" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-                <a href="#" id="openBtn">
-                    <span class="burger-icon">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                </a>
-
-                <img src="/assets/IMG/logo_claire_inc.svg" alt="logo_claire.inc"/>
+            <nav class="menuBurger">
+                <ul>
+                    <li>
+                        <h2>Pas de compte ?</h2>
+                    </li>
+                    <li>
+                        <h2><a href="/inscription.html">Inscrivez-vous ici</a></h2>
+                    </li>
+                </ul>
             </nav>
 
-            <h1>Connexion</h1>
+            <img src="/assets/IMG/logo_claire_inc.svg" alt="logo_claire.inc"/>
             
         </header>
 
         <main>
+            <h1>Connexion</h1>
+
             <form method="post" action="/views/profil.html">
-                <div>
-                    <label for="username">Nom d'utilisateur <em>/ Username</em></label>
+                
+                <label for="username">Nom d'utilisateur <em>/ Username</em>
                     <input type="text" name="username" placeholder="utilisatrice8" autofocus/>
-                </div>
-                <div>
-                    <label for="password">Mot de passe <em>/ Password</em></label>
+                </label>
+                
+                <label for="password">Mot de passe <em>/ Password</em>
                     <input type="password" name="password" placeholder="***********"/>
-                </div>
+                </label>
+                
             </form>
 
             <button>Annuler</button>
@@ -57,7 +54,9 @@
         </main>
 
         <footer>
+            <h3>Mentions légales</h3>
 
+            <a href="#">Haut de page</a>
         </footer>
 
         <script src="/assets/JS/connexion.js"></script>
