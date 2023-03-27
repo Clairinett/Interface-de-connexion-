@@ -172,7 +172,6 @@ footer > a, footer > a:visited, footer > h3 {
     main {
         background: url(/assets/IMG/illustration_connexion.jpg) no-repeat right;
         background-size: 650px;
-        background-position-y: 20px;
     }
     main > h2 {
         opacity: 1;
