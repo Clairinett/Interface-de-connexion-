@@ -39,7 +39,7 @@
             <h1>Inscription</h1>
             <h2>Déjà un compte ?&nbsp;<a href="views/connexion.html">Connectez-vous ici</a></h2>
 
-            <form id="forminscription" method="post" action="https://afpatraining.snage.tech/signup"><!--"/views/profil.html"-->
+            <form id="forminscription" method="post" action="/views/profil.html">
                 
                 <label for="username">Nom d'utilisateur <em>/ Username</em>
                     <input type="text" name="username" placeholder="utilisatrice8" autofocus/>
@@ -57,12 +57,10 @@
                     <input type="password" name="confirm-password" placeholder="***********"/>
                 </label>
                 
-
-                <button id="sendinscription" onclick="inscription()" type="submit">Valider</button>    
             </form>
 
             <button>Annuler</button>
-            
+            <button id="sendinscription">Valider</button>    
         </main>
 
         <footer>
