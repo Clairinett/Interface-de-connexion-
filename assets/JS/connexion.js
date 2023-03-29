@@ -1,10 +1,5 @@
-// const userdata8 = { 
-//   username : "util8",
-//   email: "monmail@mail.com",
-//   password: "rickroll",
-// };
+const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzk0Nzg3MzksImV4cCI6MTY3OTQ3ODc5OX0.mM-RoWVPr81UCXcJ_IkOb_uNzIJRNpCHqaznoFPXV9c";
 
-const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzk0Nzg3MzksImV4cCI6MTY3OTQ3ODc5OX0.mM-RoWVPr81UCXcJ_IkOb_uNzIJRNpCHqaznoFPXV9c"
 fetch("https://afpatraining.snage.tech/login", {
   method: "POST", 
   headers: {
@@ -12,9 +7,9 @@ fetch("https://afpatraining.snage.tech/login", {
     "x-api-key": apiKey
   },
   body: JSON.stringify({
-    username: "test",
-    email: "mail",
-    password: "123",
+    username : "spyroLeDragon",
+    email: "spy@dragonmail.co",
+    password: "vol",
   }),
 })
 

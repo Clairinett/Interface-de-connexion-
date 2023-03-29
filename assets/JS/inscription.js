@@ -1,16 +1,42 @@
-// const preventDefault = document.getElementsByClassName('preventDefault').addEventListener("click", function(event){
-//   event.preventDefault();
-// });
+let noclick = () => {
+  // const btnAnnuler = document.getElementById('btnAnnuler');
+  const btnValider = document.getElementById("btnValider");
+  const setusername = document.getElementById("setusername").value;
+  const setemail = document.getElementById("setemail").value;
+  const setpassword = document.getElementById("setpassword").value;
+  // const confirmpassword = document.getElementById("confirm-password").value;
 
-const setusername = document.getElementById("setusername").toString();
-const setemail = document.getElementById("setemail").toString();
-const setpassword = document.getElementById("setpassword").toString();
 
-const userdata8 = { 
-  username: "test",
-  email: "mail",
-  password: "123",
+  btnValider.addEventListener("click", e=>{
+    e.preventDefault();
+  });
+
+  fetch("https://afpatraining.snage.tech/signup", {
+    method: "POST", 
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzk0Nzg3MzksImV4cCI6MTY3OTQ3ODc5OX0.mM-RoWVPr81UCXcJ_IkOb_uNzIJRNpCHqaznoFPXV9c",
+      "Authorization" : "$tokenuser",
+    },
+    body: JSON.stringify({
+      username: setusername,
+      email: setemail,
+      password: setpassword,
+    }),
+  })
+
+  .then((response) => response.json())
+  .then((userdata8) => {
+  console.log("Success:", userdata8);
+  })
+  .catch((error) => {
+  console.error("Error:", error);
+  })
 };
+
+
+
+
 
 
 
@@ -42,20 +68,6 @@ const userdata8 = {
 //   password: "dazlidjazhdazdnczLDNHZAIUH",
 // };
 
-fetch("https://afpatraining.snage.tech/signup", {
-  method: "POST", 
-  headers: {
-    "Content-Type": "application/json",
-    "x-api-key" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzk0Nzg3MzksImV4cCI6MTY3OTQ3ODc5OX0.mM-RoWVPr81UCXcJ_IkOb_uNzIJRNpCHqaznoFPXV9c",
-    "Authorization" : "$tokenuser",
-  },
-  body: JSON.stringify(userdata8),
-})
+// {id: 17, username: 'spyroLeDragon', email: 'spy@dragonmail.co'} mdp: vol
 
-.then((response) => response.json())
-.then((userdata8) => {
-console.log("Success:", userdata8);
-})
-.catch((error) => {
-console.error("Error:", error);
-});
+// {id: 18, username: 'claire', email: 'claire@mail.com'} mdp: id18
