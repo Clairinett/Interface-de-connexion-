@@ -39,18 +39,18 @@
             <h1>Inscription</h1>
             <h2>Déjà un compte ?&nbsp;<a href="views/connexion.html">Connectez-vous ici</a></h2>
 
-            <form id="forminscription" method="post" action="/views/profil.html">
+            <form method="post">
                 
                 <label for="username">Nom d'utilisateur <em>/ Username</em>
-                    <input type="text" name="username" placeholder="utilisatrice8" autofocus/>
+                    <input id="setusername" type="text" name="username" placeholder="utilisatrice8" autofocus/>
                 </label>
                 
                 <label for="email">Mail<em>/ E-mail</em>
-                    <input type="email" name="email" placeholder="exemple@mail.com"/>
+                    <input id="setemail" type="email" name="email" placeholder="exemple@mail.com"/>
                 </label>
             
                 <label for="password">Mot de passe <em>/ Password</em>
-                    <input type="password" name="password" placeholder="***********"/>
+                    <input id="setpassword" type="password" name="password" placeholder="***********"/>
                 </label>
                 
                 <label for="confirm-password">Confirmer mot de passe <em>/ Confirm password</em>
@@ -59,8 +59,8 @@
                 
             </form>
 
-            <button>Annuler</button>
-            <button id="sendinscription">Valider</button>    
+            <button onclick="preventDefault()">Annuler</button>
+            <button onclick="preventDefault()">Valider</button>    
         </main>
 
         <footer>
