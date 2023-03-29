@@ -2,19 +2,24 @@
 //   event.preventDefault();
 // });
 
-// const setusername = document.getElementById("setusername");
-// const setemail = document.getElementById("setemail");
-// const setpassword = document.getElementById("setpassword");
+const setusername = document.getElementById("setusername").toString();
+const setemail = document.getElementById("setemail").toString();
+const setpassword = document.getElementById("setpassword").toString();
 
+const userdata8 = { 
+  username: "test",
+  email: "mail",
+  password: "123",
+};
+
+
+
+// id 14
 // const userdata8 = { 
-//   username: setusername,
-//   email: setemail,
-//   password: setpassword,
+//   username: "setusername",
+//   email: "setemail",
+//   password: "setpassword",
 // };
-
-
-
-
 
 //id 10
 // const userdata8 = {    
@@ -31,11 +36,11 @@
 // };
 
 //id 13
-const userdata8 = { 
-  username: "jérémy",
-  email: "a@a.a",
-  password: "dazlidjazhdazdnczLDNHZAIUH",
-};
+// const userdata8 = { 
+//   username: "jérémy",
+//   email: "a@a.a",
+//   password: "dazlidjazhdazdnczLDNHZAIUH",
+// };
 
 fetch("https://afpatraining.snage.tech/signup", {
   method: "POST", 
@@ -54,4 +59,3 @@ console.log("Success:", userdata8);
 .catch((error) => {
 console.error("Error:", error);
 });
-

@@ -12,9 +12,9 @@ fetch("https://afpatraining.snage.tech/login", {
     "x-api-key": apiKey
   },
   body: JSON.stringify({
-    username: "jérémy",
-    email: "a@a.a",
-    password: "dazlidjazhdazdnczLDNHZAIUH",
+    username: "test",
+    email: "mail",
+    password: "123",
   }),
 })
 
