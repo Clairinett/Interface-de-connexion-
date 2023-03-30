@@ -41,18 +41,18 @@
 
             <form method="post">
                 
-                <label for="username">Nom d'utilisateur <em>/ Username</em>
-                    <input type="text" name="username" placeholder="utilisatrice8" autofocus/>
+                <label for="setemail">Mail<em>/ E-mail</em>
+                    <input id="setemail" type="text" name="e-mail" placeholder="exemple@mail.com" autofocus/>
                 </label>
                 
                 <label for="password">Mot de passe <em>/ Password</em>
-                    <input type="password" name="password" placeholder="***********"/>
+                    <input id="setpassword" type="password" name="password" placeholder="***********"/>
                 </label>
                 
             </form>
 
             <button>Annuler</button>
-            <button>Valider</button>
+            <button id="btnValider" onclick="noclickconnexion()" >Valider</button>
         </main>
 
         <footer>

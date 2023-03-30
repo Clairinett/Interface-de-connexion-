@@ -1,4 +1,4 @@
-let noclick = () => {
+let noclickinscription = () => {
   // const btnAnnuler = document.getElementById('btnAnnuler');
   const btnValider = document.getElementById("btnValider");
   const setusername = document.getElementById("setusername").value;
@@ -38,39 +38,18 @@ let noclick = () => {
 
 
 
+// {id 14,username: "setusername",email: "setemail",password: "setpassword", }
 
+// { id 10 username : "utilisatrice8",email : "mail@mail.com",password : "passwort"
 
-// id 14
-// const userdata8 = { 
-//   username: "setusername",
-//   email: "setemail",
-//   password: "setpassword",
-// };
+// { id 11, username: "util8",email: "monmail@gmail.com", //attention une lettre horrible, password: "rickroll",
 
-//id 10
-// const userdata8 = {    
-//     username : "utilisatrice8",
-//     email : "mail@mail.com",
-//     password : "passwort"
-// }
-
-//id 11
-// const userdata8 = { 
-//   username: "util8",
-//   email: "monmail@gmail.com", //attention une lettre horrible
-//   password: "rickroll",
-// };
-
-//id 13
-// const userdata8 = { 
-//   username: "jérémy",
-//   email: "a@a.a",
-//   password: "dazlidjazhdazdnczLDNHZAIUH",
-// };
+// {//id 13, username: "jérémy",email: "a@a.a",password: "dazlidjazhdazdnczLDNHZAIUH",
 
 // {id: 17, username: 'spyroLeDragon', email: 'spy@dragonmail.co'} mdp: vol
 
 // {id: 18, username: 'claire', email: 'claire@mail.com'} mdp: id18
 
-
 //{id: 19, username: 'julien', email: 'julien@mail.com'} mdp madeleine
+
+// {id: 22, username: 'macdo', email: 'macdo@mail.com'} mdp cookie
