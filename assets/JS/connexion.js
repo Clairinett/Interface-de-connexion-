@@ -7,9 +7,9 @@ fetch("https://afpatraining.snage.tech/login", {
     "x-api-key": apiKey
   },
   body: JSON.stringify({
-    username : "spyroLeDragon",
-    email: "spy@dragonmail.co",
-    password: "vol",
+    username : "julien",
+    email: "julien@mail.com",
+    password: "madeleine",
   }),
 })
 
