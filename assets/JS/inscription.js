@@ -4,12 +4,31 @@ let noclickinscription = () => {
   const setusername = document.getElementById("setusername").value;
   const setemail = document.getElementById("setemail").value;
   const setpassword = document.getElementById("setpassword").value;
-  // const confirmpassword = document.getElementById("confirm-password").value;
+  const confirmpassword = document.getElementById("confirm-password").value;
 
 
   btnValider.addEventListener("click", e=>{
     e.preventDefault();
   });
+
+  
+  let verifInput = () => {
+    if (setusername == "" || setemail == "" || setpassword == ""){
+      alert("Vous devez remplir tous les champs")
+    }
+
+    // if (setemail != "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/") {
+    //   alert("Votre address mail n'est pas correct. \nVoici un exemple d'address mail valide : exemple@mail.com");
+    //   //setemail.style.border = "4px outset rgb(172, 43, 26)";
+    // }
+
+    if (setpassword !== confirmpassword){
+      alert("Votre mot de passe n'est pas = à la confirmation du mot de passe");
+    }
+
+  };
+  verifInput();
+
 
   fetch("https://afpatraining.snage.tech/signup", {
     method: "POST", 
@@ -53,3 +72,5 @@ let noclickinscription = () => {
 //{id: 19, username: 'julien', email: 'julien@mail.com'} mdp madeleine
 
 // {id: 22, username: 'macdo', email: 'macdo@mail.com'} mdp cookie
+
+// {id: 23, username: 'cookie', email: 'cookie@mail.com'} mdp 123
