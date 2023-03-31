@@ -6,6 +6,7 @@ let noclickinscription = () => {
   const setpassword = document.getElementById("setpassword").value;
   const confirmpassword = document.getElementById("confirm-password").value;
 
+  //let regexMail = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm;
 
   btnValider.addEventListener("click", e=>{
     e.preventDefault();
@@ -13,17 +14,24 @@ let noclickinscription = () => {
 
   
   let verifInput = () => {
-    if (setusername == "" || setemail == "" || setpassword == ""){
-      alert("Vous devez remplir tous les champs")
-    }
+    // if (setusername == "" || setemail == "" || setpassword == ""){
+    //   alert("Vous devez remplir tous les champs")
+    // }
 
     // if (setemail != "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/") {
     //   alert("Votre address mail n'est pas correct. \nVoici un exemple d'address mail valide : exemple@mail.com");
     //   //setemail.style.border = "4px outset rgb(172, 43, 26)";
     // }
-
+    
+    if (setemail != setemail.match(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm)) {
+      return alert("Votre address mail n'est pas correct. \nVoici un exemple d'address mail valide : exemple@mail.com");
+      
+    }
     if (setpassword !== confirmpassword){
-      alert("Votre mot de passe n'est pas = à la confirmation du mot de passe");
+      return alert("Votre mot de passe n'est pas = à la confirmation du mot de passe");
+    }
+    else {
+      window.location.href = "http://localhost:5500/views/profil.html";
     }
 
   };
@@ -42,9 +50,13 @@ let noclickinscription = () => {
       email: setemail,
       password: setpassword,
     }),
+    redirect: "follow",
   })
 
-  .then((response) => response.json())
+  .then((response) => {
+    response.json();
+    // window.location.href = "http://localhost:5500/views/profil.html";
+  })
   .then((userdata8) => {
   console.log("Success:", userdata8);
   })
@@ -74,3 +86,5 @@ let noclickinscription = () => {
 // {id: 22, username: 'macdo', email: 'macdo@mail.com'} mdp cookie
 
 // {id: 23, username: 'cookie', email: 'cookie@mail.com'} mdp 123
+
+// {id: 26, username: 'chocolat', email: 'chocolat@mail.com'} mdp chocapic963
