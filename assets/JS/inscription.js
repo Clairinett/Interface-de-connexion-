@@ -21,11 +21,6 @@ btnValider.addEventListener("click", e=>{
     if (setpassword.value !== confirmpassword.value){
       alert("Votre mot de passe n'est pas égale à la confirmation du mot de passe");
     }
-
-    // else {
-    //   window.location.href = "http://localhost:5500/views/profil.html";
-    // }
-
   };
   verifInput();
 
@@ -46,12 +41,10 @@ btnValider.addEventListener("click", e=>{
   })
 
   .then((response) => response.json())
-  // if (){
-  //   window.location.href = "http://localhost:5500/views/profil.html";
-  // }
-
+  
   .then((response) => {
   console.log("Success:", response);
+  window.location.href = "views/profil.html"
   })
   .catch((error) => {
   console.error("Error:", error);
@@ -86,3 +79,10 @@ btnValider.addEventListener("click", e=>{
 
 // {id: 32, username: 'milka', email: 'milka@mail.com'} mdp suisse
 
+// {id: , username: 'location', email: 'location@mail.com'} mdp 789
+
+// hermione hermione@poudlard.fr wingardium
+
+//nevil nevil@poudlard.fr oublietout 
+
+// malfoy malfoy@poudlard.fr crachelimache

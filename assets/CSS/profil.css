@@ -280,8 +280,8 @@ footer > a, footer > a:visited, footer > h3 {
     form, main > h1 {
         margin-left: 225px;
     }
-    main > button {
-        margin-left: 225px;
+    main > button:first-of-type {
+        margin-left: 225px!important;
         width: 180px;
     }
     footer {
@@ -307,7 +307,7 @@ footer > a, footer > a:visited, footer > h3 {
     }
 }
 @media (min-width: 1300px){
-    form, button:not(button:nth-of-type(2)) {
+    form, button:first-of-type {
         margin-left: 280px;
     }
     main {

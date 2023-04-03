@@ -15,11 +15,6 @@ btnValider.addEventListener("click", e=>{
     if (!regexMail.test (setemail.value) ) {
       alert("Votre address mail n'est pas correct. \nVoici un exemple d'address mail valide : exemple@mail.com");
     }
-
-    else {
-      // window.location.href = "http://localhost:5500/views/profil.html";
-    };
-
   };
   verifInput();
 
@@ -37,12 +32,10 @@ btnValider.addEventListener("click", e=>{
   })
 
   .then((response) => response.json())
-  // if (verifInput() = true){
-  //   window.location.href = "http://localhost:5500/views/profil.html";
-  // }
-
+  
   .then((response) => {
   console.log("Success:", response);
+  window.location.href = "./profil.html"
   })
   .catch((error) => {
   console.error("Error:", error);
