@@ -4,29 +4,24 @@ const setemail = document.getElementById("setemail");
 const setpassword = document.getElementById("setpassword");
 const confirmpassword = document.getElementById("confirm-password");
 
-
-//let regexMail = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm;
+let regexMail = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm;
 
 btnValider.addEventListener("click", e=>{
   e.preventDefault();
 
   let verifInput = () => {
-    // if (setusername == "" || setemail == "" || setpassword == ""){
-    //   alert("Vous devez remplir tous les champs")
-    // }
-
-    // if (setemail != "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/") {
-    //   alert("Votre address mail n'est pas correct. \nVoici un exemple d'address mail valide : exemple@mail.com");
-    //   //setemail.style.border = "4px outset rgb(172, 43, 26)";
-    // }
-    
-    // if (setemail != setemail.match(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm)) {
-    //   return alert("Votre address mail n'est pas correct. \nVoici un exemple d'address mail valide : exemple@mail.com");
-      
-    // }
-    if (setpassword !== confirmpassword){
-      return alert("Votre mot de passe n'est pas = à la confirmation du mot de passe");
+    if (setusername.value == "" || setemail.value == "" || setpassword.value == ""){
+      alert("Vous devez remplir tous les champs")
     }
+
+    if (!regexMail.test (setemail.value) ) {
+      alert("Votre address mail n'est pas correct. \nVoici un exemple d'address mail valide : exemple@mail.com");
+    }
+
+    if (setpassword.value !== confirmpassword.value){
+      alert("Votre mot de passe n'est pas égale à la confirmation du mot de passe");
+    }
+
     // else {
     //   window.location.href = "http://localhost:5500/views/profil.html";
     // }
