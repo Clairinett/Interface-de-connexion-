@@ -1,16 +1,14 @@
-let noclickconnexion = () => {
-  const btnValider = document.getElementById("btnValider");
-  const setemail = document.getElementById("setemail").value;
-  const setpassword = document.getElementById("setpassword").value;
+const btnValider = document.getElementById("btnValider");
+const setemail = document.getElementById("setemail");
+const setpassword = document.getElementById("setpassword");
 
-  btnValider.addEventListener("click", e=>{
-    e.preventDefault();
-  });
+
+btnValider.addEventListener("click", e=>{
+  e.preventDefault();
 
   let verifInput = () => {
     if (setemail == "" || setpassword == ""){
       alert("Vous devez remplir tous les champs");
-      // verifInput() = false;
     }
 
     // if (setemail != "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/") {
@@ -23,9 +21,7 @@ let noclickconnexion = () => {
     // }
       
     else {
-      // verifInput() = true;
-      window.location.href = "http://localhost:5500/views/profil.html";
-
+      // window.location.href = "http://localhost:5500/views/profil.html";
     };
 
   };
@@ -39,22 +35,21 @@ let noclickconnexion = () => {
       "Authorization" : "$tokenuser",
     },
     body: JSON.stringify({
-      email : setemail,
-      password: setpassword
+      email : setemail.value,
+      password: setpassword.value
     })
   })
 
+  .then((response) => response.json())
+  // if (verifInput() = true){
+  //   window.location.href = "http://localhost:5500/views/profil.html";
+  // }
+
   .then((response) => {
-    response.json();
-    // if (verifInput() = true){
-    //   window.location.href = "http://localhost:5500/views/profil.html";
-    // }
-  })
-  .then((userdata8) => {
-  console.log("Success:", userdata8);
+  console.log("Success:", response);
   })
   .catch((error) => {
   console.error("Error:", error);
   });
-};
-
+  
+});
